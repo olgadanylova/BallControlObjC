@@ -48,18 +48,18 @@
     
     [backendless.rt addConnectErrorEventListener:^(NSString *connectError) {
         sharedObject = [backendless.sharedObject connect:SHARED_OBJECT_NAME];
-        self.navigationItem.title = [NSString stringWithFormat:@"Status: connection failed (%@)", connectError];
+        NSLog(@"Status: connection failed (%@)", connectError);
         self.connectButton.enabled = NO;
     }];
     
     [backendless.rt addDisonnectEventListener:^(NSString *disconnectReason) {
         sharedObject = [backendless.sharedObject connect:SHARED_OBJECT_NAME];
         self.navigationItem.title = [NSString stringWithFormat:@"Status: disconnected (%@)", disconnectReason];
-        self.connectButton.enabled = false;
+        self.connectButton.enabled = NO;
     }];
     
     [backendless.rt addReconnectAttemptEventListener:^(ReconnectAttemptObject *reconnectAttempt) {
-        self.navigationItem.title = @"Status: trying to connect";
+        NSLog(@"Status: trying to connect");
     }];
 }
 
