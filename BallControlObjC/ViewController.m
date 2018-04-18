@@ -67,6 +67,7 @@
         [self showErrorAlert:fault.message];
     }];
     [self addRTListeners];
+    [self addOnChangesListener];
 }
 
 -(void)calculateCoefficients {
