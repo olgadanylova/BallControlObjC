@@ -10,23 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ViewController-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="U3t-fj-lv8">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8YM-zF-f19" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EL6-Nl-X3R">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rAa-nF-SnP" kind="relationship" relationship="rootViewController" id="SBI-uX-t3n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upn-aX-2a3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="36"/>
+        </scene>
+        <!--Status:-->
+        <scene sceneID="gTo-z2-wTf">
+            <objects>
+                <viewController id="rAa-nF-SnP" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoj-Co-uvT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-a9-kSV">
-                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ballLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-a9-kSV">
+                                <rect key="frame" x="150" y="296" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="XgN-SB-YA0"/>
-                                    <constraint firstAttribute="width" constant="100" id="hKW-SQ-AGo"/>
+                                    <constraint firstAttribute="width" constant="75" id="1TK-l5-CSZ"/>
+                                    <constraint firstAttribute="height" constant="75" id="AB2-WF-CvU"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azA-Fb-bMa">
-                                <rect key="frame" x="40" y="263.5" width="295" height="140.5"/>
+                                <rect key="frame" x="40" y="263" width="295" height="140.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Wellcome to Ball Control!">
@@ -229,119 +255,36 @@ press Connect to get started</string>
                                 </variation>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" notEnabled="YES"/>
-                        </accessibility>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="143-BA-1k2"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="2rr-2o-HxL"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="9u9-fu-MeS"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BvO-DH-5f7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azA-Fb-bMa" secondAttribute="trailing" constant="40" id="Ce9-Zx-LgI"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HQQ-vo-xtz"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KxX-Ht-RuT"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MaA-CD-6hd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azA-Fb-bMa" secondAttribute="trailing" constant="200" id="VMX-FP-aj9"/>
-                            <constraint firstItem="3d7-a9-kSV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VdH-Ry-FhA"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="kJV-MY-AiX"/>
-                            <constraint firstItem="azA-Fb-bMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="llA-jN-ZKQ"/>
-                            <constraint firstItem="3d7-a9-kSV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nNb-8e-OGC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azA-Fb-bMa" secondAttribute="trailing" constant="200" id="ots-a9-O2S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azA-Fb-bMa" secondAttribute="trailing" constant="160" id="s2N-1H-AwP"/>
+                            <constraint firstItem="3d7-a9-kSV" firstAttribute="centerX" secondItem="yoj-Co-uvT" secondAttribute="centerX" id="9pq-f7-jit"/>
+                            <constraint firstItem="3d7-a9-kSV" firstAttribute="centerY" secondItem="yoj-Co-uvT" secondAttribute="centerY" id="PMc-jh-ze4"/>
+                            <constraint firstItem="azA-Fb-bMa" firstAttribute="leading" secondItem="DB6-MD-Vy4" secondAttribute="leading" constant="40" id="VkQ-Dr-1rc"/>
+                            <constraint firstItem="azA-Fb-bMa" firstAttribute="centerY" secondItem="yoj-Co-uvT" secondAttribute="centerY" id="pNM-Ga-4VQ"/>
+                            <constraint firstItem="DB6-MD-Vy4" firstAttribute="trailing" secondItem="azA-Fb-bMa" secondAttribute="trailing" constant="40" id="x0U-Om-2aX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Ce9-Zx-LgI"/>
-                                <exclude reference="VMX-FP-aj9"/>
-                                <exclude reference="ots-a9-O2S"/>
-                                <exclude reference="s2N-1H-AwP"/>
-                                <exclude reference="2rr-2o-HxL"/>
-                                <exclude reference="9u9-fu-MeS"/>
-                                <exclude reference="BvO-DH-5f7"/>
-                                <exclude reference="HQQ-vo-xtz"/>
-                                <exclude reference="KxX-Ht-RuT"/>
-                                <exclude reference="MaA-CD-6hd"/>
-                                <exclude reference="kJV-MY-AiX"/>
-                                <exclude reference="llA-jN-ZKQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="s2N-1H-AwP"/>
-                                <exclude reference="143-BA-1k2"/>
-                                <exclude reference="HQQ-vo-xtz"/>
-                                <include reference="MaA-CD-6hd"/>
-                                <include reference="kJV-MY-AiX"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="ots-a9-O2S"/>
-                                <include reference="9u9-fu-MeS"/>
-                                <include reference="BvO-DH-5f7"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="Ce9-Zx-LgI"/>
-                                <include reference="llA-jN-ZKQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="VMX-FP-aj9"/>
-                                <include reference="2rr-2o-HxL"/>
-                                <include reference="KxX-Ht-RuT"/>
-                            </mask>
-                        </variation>
+                        <viewLayoutGuide key="safeArea" id="DB6-MD-Vy4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Status: Disconnected" id="nTk-VM-On6">
-                        <barButtonItem key="leftBarButtonItem" title="Connect" id="0SO-11-7xT">
+                    <navigationItem key="navigationItem" title="Status:" id="IJI-x4-xjM">
+                        <barButtonItem key="leftBarButtonItem" title="Connect" id="Jtx-gs-zSt">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="pressedConnect:" destination="BYZ-38-t0r" id="enZ-zF-Aab"/>
+                                <action selector="pressedConnect:" destination="rAa-nF-SnP" id="XW4-KC-dAH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="connectButton" destination="0SO-11-7xT" id="0FG-wU-w8c"/>
-                        <outlet property="imageView" destination="3d7-a9-kSV" id="imu-Q0-oSi"/>
-                        <outlet property="textView" destination="azA-Fb-bMa" id="9Is-nQ-NUH"/>
+                        <outlet property="connectButton" destination="Jtx-gs-zSt" id="j5l-7I-Aka"/>
+                        <outlet property="imageView" destination="3d7-a9-kSV" id="Guu-L1-gF5"/>
+                        <outlet property="textView" destination="azA-Fb-bMa" id="KJJ-z3-S8A"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmW-Bn-Hc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.37681159420299" y="35.869565217391305"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="U3t-fj-lv8">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="upn-aX-2a3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8YM-zF-f19" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EL6-Nl-X3R">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kVr-H2-01P"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-84" y="36"/>
+            <point key="canvasLocation" x="662" y="36"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ball" width="1165" height="1165"/>
+        <image name="ballLogo" width="96" height="13"/>
     </resources>
 </document>
